@@ -13,6 +13,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             const el = document.getElementById('para1');
             const para2 = document.getElementById('para2');
+            const profileImg = document.getElementById('profile-img');
             const text = el.getAttribute('data-text');
             el.innerHTML = '';
             let i = 0;
@@ -24,6 +25,7 @@
                     setTimeout(type, 15);
                 } else {
                     para2.classList.remove('opacity-0');
+                    profileImg.classList.remove('translate-x-20', 'opacity-0');
                 }
             };
 
@@ -60,10 +62,10 @@
                 <img class="img-quotes absolute -bottom-5 md:bottom-5 right-0 opacity-50"
                     src="/assets/images/quotes.svg" alt="">
             </div>
-            <div class="img-content w-full flex justify-center h-fit">
-                <img class="w-[200px] lg:w-[280px] aspect-square" src="/assets/images/nrt-profile.png"
-                    alt="narattha profile">
+            <div class="img-content w-full flex justify-center h-fit transform translate-x-20 opacity-0 transition-all duration-700 ease-out" id="profile-img">
+                <img class="w-[200px] lg:w-[280px] aspect-square" src="/assets/images/nrt-profile-bw.png" alt="narattha profile">
             </div>
+            
         </div>
         <div class="div-button flex justify-center md:justify-start mt-10 lg:mt-0 pb-4 border-b border-[#e5e6e1]">
             <a class="nrt-btn-primary" target="_blank"
