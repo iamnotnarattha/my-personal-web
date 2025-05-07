@@ -8,6 +8,30 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
     <title>About Me</title>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const el = document.getElementById('para1');
+            const para2 = document.getElementById('para2');
+            const text = el.getAttribute('data-text');
+            el.innerHTML = '';
+            let i = 0;
+
+            const type = () => {
+                if (i < text.length) {
+                    el.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, 15);
+                } else {
+                    para2.classList.remove('opacity-0');
+                }
+            };
+
+            type();
+        });
+    </script>
+
+
 </head>
 
 <body>
@@ -23,14 +47,16 @@
     <div class="div-contents px-4 lg:px-20">
         <div class="about-content flex flex-col-reverse md:grid md:grid-cols-[2fr,1fr] gap-10 lg:gap-20 pt-10 md:pt-20">
             <div class="text-content relative flex flex-col gap-5 md:gap-10 indent-5 md:indent-10">
-                <p> I am a UX/UI Designer with over 2 years of experience in startup environments, specializing in
-                    responsive web and mobile application design.
-                    I am proficient in developing UI components and collaborating effectively with developers, with a
-                    solid
-                    understanding of HTML/CSS.</p>
-                <p>I have worked on diverse projects across fintech, event booking,
-                    e-commerce, and more, always focusing on delivering user experiences that are intuitive, visually
-                    engaging, and aligned with business goals.</p>
+                <p id="para1" class="typing"
+                    data-text="I am a UX/UI Designer with over 2 years of experience in startup environments, specializing in responsive web and mobile application design. I am proficient in developing UI components and collaborating effectively with developers, with a solid understanding of HTML/CSS.">
+                </p>
+
+                <p id="para2" class="opacity-0 transition-opacity duration-500">
+                    I have worked on diverse projects across fintech, event booking, e-commerce, and more, always
+                    focusing on delivering user experiences that are intuitive, visually engaging, and aligned with
+                    business goals.
+                </p>
+
                 <img class="img-quotes absolute -bottom-5 md:bottom-5 right-0 opacity-50"
                     src="/assets/images/quotes.svg" alt="">
             </div>
@@ -46,33 +72,36 @@
             </a>
         </div>
         <div class="info-content mt-16 flex flex-col md:flex-row gap-4 text-[#222222]">
-            <div class="item bg-[#E4F79420] p-4 rounded-xl flex-1 flex flex-col sm:flex-row md:flex-col sm:gap-4 md:gap-0 justify-center">
+            <div
+                class="item bg-[#E4F79420] p-4 rounded-xl flex-1 flex flex-col sm:flex-row md:flex-col sm:gap-4 md:gap-0 justify-center">
                 <p class="item-title font-bold flex-[0.5]">About me</p>
-                <p class="item-description flex-1">Tanarat Arjprakhon ( F ) 
+                <p class="item-description flex-1">Tanarat Arjprakhon ( F )
                     <br>17 Jan 1999
                     <br>tanarat1718@gmail.com
                     <br>+669 8170 2726
                 </p>
             </div>
-            <div class="item bg-[#E4F79420] p-4 rounded-xl flex-1 flex flex-col sm:flex-row md:flex-col sm:gap-4 md:gap-0 justify-center">
+            <div
+                class="item bg-[#E4F79420] p-4 rounded-xl flex-1 flex flex-col sm:flex-row md:flex-col sm:gap-4 md:gap-0 justify-center">
                 <p class="item-title font-bold flex-[0.5]">Education</p>
-                <p class="item-description flex-1"><span class="italic">(2018-2022)</span> 
+                <p class="item-description flex-1"><span class="italic">(2018-2022)</span>
                     <br>Information Technology, College of Computing,
-                    <br>Khon  Kaen University
+                    <br>Khon Kaen University
                 </p>
             </div>
-            <div class="item bg-[#E4F79420] p-4 rounded-xl flex-1 flex flex-col sm:flex-row md:flex-col sm:gap-4 md:gap-0 justify-center">
+            <div
+                class="item bg-[#E4F79420] p-4 rounded-xl flex-1 flex flex-col sm:flex-row md:flex-col sm:gap-4 md:gap-0 justify-center">
                 <p class="item-title font-bold flex-[0.5]">My Experience</p>
-                <p class="item-description flex-1"><span class="italic">(July 2022 - Present)</span> 
+                <p class="item-description flex-1"><span class="italic">(July 2022 - Present)</span>
                     <br>UI/UX Designer at ARZIO / Think Technology
-                    <br>Khon  Kaen, Thailand
+                    <br>Khon Kaen, Thailand
                 </p>
             </div>
         </div>
 
-    <div class="skill-content mt-16 flex flex-col md:flex-row gap-4 text-[#222222]">
+        <div class="skill-content mt-16 flex flex-col md:flex-row gap-4 text-[#222222]">
 
-    </div>
+        </div>
 
     </div>
 </body>
