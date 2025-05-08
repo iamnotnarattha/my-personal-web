@@ -22,7 +22,7 @@
                 if (i < text.length) {
                     el.innerHTML += text.charAt(i);
                     i++;
-                    setTimeout(type, 15);
+                    setTimeout(type, 10);
                 } else {
                     para2.classList.remove('opacity-0');
                     profileImg.classList.remove('translate-x-20', 'opacity-0');
@@ -46,7 +46,7 @@
             });
     </script>
 
-    <div class="div-contents px-4 lg:px-20">
+    <div class="div-contents px-4 lg:px-20 pb-20">
         <div class="about-content flex flex-col-reverse md:grid md:grid-cols-[2fr,1fr] gap-10 lg:gap-20 pt-10 md:pt-20">
             <div class="text-content relative flex flex-col gap-5 md:gap-10 indent-5 md:indent-10">
                 <p id="para1" class="typing"
@@ -62,10 +62,12 @@
                 <img class="img-quotes absolute -bottom-5 md:bottom-5 right-0 opacity-50"
                     src="/assets/images/quotes.svg" alt="">
             </div>
-            <div class="img-content w-full flex justify-center h-fit transform translate-x-20 opacity-0 transition-all duration-700 ease-out" id="profile-img">
-                <img class="w-[200px] lg:w-[280px] aspect-square" src="/assets/images/nrt-profile-bw.png" alt="narattha profile">
+            <div class="img-content w-full flex justify-center h-fit transform translate-x-20 opacity-0 transition-all duration-700 ease-out"
+                id="profile-img">
+                <img class="w-[200px] lg:w-[280px] aspect-square" src="/assets/images/nrt-profile-bw.png"
+                    alt="narattha profile">
             </div>
-            
+
         </div>
         <div class="div-button flex justify-center md:justify-start mt-10 lg:mt-0 pb-4 border-b border-[#e5e6e1]">
             <a class="nrt-btn-primary" target="_blank"
@@ -101,10 +103,92 @@
             </div>
         </div>
 
-        <div class="skill-content mt-16 flex flex-col md:flex-row gap-4 text-[#222222]">
-
+        <div class="flex flex-col sm:flex-row gap-10 lg:gap-5 mt-16">
+            <div class="skill-content sm:basis-full md:basis-2/3 pb-4 md:border-b border-[#e5e6e1]">
+                <div class="relative flex items-center gap-2">
+                    <div class="absolute z-[-1] w-5 -top-1 aspect-square bg-[#E4F794]"></div>
+                    <p class="text-xl font-medium">Skills</p>
+                    <div class="w-full h-[1px] bg-[#e5e6e1]"></div>
+                </div>
+                <div class="item flex flex-col md:flex-row gap-4 text-[#222222]">
+                    <div class="flex flex-col flex-1">
+                        <p class="font-medium">Design</p>
+                        <p>
+                            • Design system
+                            <br>• Visual design
+                            <br>• Wireframe
+                            <br>• Prototype
+                            <br>• Responsive design
+                            <br>• UX research
+                            <br>• Agile Methodology
+                        </p>
+                    </div>
+                    <div class="flex flex-col flex-1">
+                        <p class="font-medium">UI Development</p>
+                        <p>
+                            • HTML / CSS
+                            <br>• Tailwind CSS / Bootstrap
+                            <br>• JavaScript / TypeScript
+                            <br>• React / React Native
+                    </div>
+                </div>
+            </div>
+            <div class="tool-content sm:basis-full md:basis-1/3 pb-4 md:border-b border-[#e5e6e1]">
+                <div class="relative flex items-center gap-2">
+                    <div class="absolute z-[-1] w-5 -top-1 aspect-square bg-[#E4F794]"></div>
+                    <p class="text-xl font-medium">Tools</p>
+                    <div class="w-full h-[1px] bg-[#e5e6e1]"></div>
+                </div>
+                <div class="item flex flex-col gap-4 text-[#222222]">
+                    <p>
+                        • Figma
+                        <br>• Adobe Photoshop
+                        <br>• Frame0
+                        <br>• Canva
+                        <br>• Git / Gitea
+                        <br>• Visual Studio Code
+                        <br>• Android Studio
+                </div>
+            </div>
         </div>
 
+        <div class="cer-content mt-16">
+            <div class="relative flex items-center gap-2">
+                <div class="absolute z-[-1] w-5 -top-1 aspect-square bg-[#E4F794]"></div>
+                <p class="text-xl font-medium">Certifications</p>
+                <div class="w-full h-[1px] bg-[#e5e6e1]"></div>
+            </div>
+            <div class="items flex flex-col lg:flex-row gap-4 py-5 text-[#222222]">
+                <a class="cer-card relative group duration-300 flex flex-col md:flex-row gap-8 p-4 bg-[#E4F79415]"
+                    href="https://coursera.org/share/54ac8c6bf598c3b6f401d81da2f7ab19" target="_blank">
+                    <div class="basis-1/3">
+                        <img class="" src="/assets/images/CERTIFICATE-Tanarat1.jpeg" alt="Certificate">
+                    </div>
+                    <div class="basis-2/3">
+                        <p class="text-lg font-bold">Foundations of User Experience (UX) Design</p>
+                        <p>Google</p>
+                        <p class="italic">November 14, 2024</p>
+                    </div>
+                    <span
+                        class="absolute duration-300 bottom-0 right-0 bg-[#222222] text-[#FFFFFF] py-3 px-4 lg:opacity-0 group-hover:opacity-100">View
+                        certificate</span>
+                </a>
+                <a class="cer-card relative group duration-300 flex flex-col md:flex-row gap-8 p-4 bg-[#E4F79415]"
+                    href="https://coursera.org/share/35dad05dfcf35790a478b64ff2ef5293" target="_blank">
+                    <div class="basis-1/3">
+                        <img class="" src="/assets/images/CERTIFICATE-Tanarat2.jpeg" alt="Certificate">
+                    </div>
+                    <div class="basis-2/3">
+                        <p class="text-lg font-bold">Start the UX Design Process: Empathize, Define, and Ideate</p>
+                        <p>Google</p>
+                        <p class="italic">December 4, 2024</p>
+                    </div>
+                    <span
+                        class="absolute duration-300 bottom-0 right-0 bg-[#222222] text-[#FFFFFF] py-3 px-4 lg:opacity-0 group-hover:opacity-100">View
+                        certificate</span>
+                </a>
+            </div>
+        </div>
     </div>
 </body>
 
