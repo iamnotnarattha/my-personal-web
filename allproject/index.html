@@ -113,7 +113,7 @@
                         class="absolute w-10 aspect-square text-lg font-medium flex justify-center items-center -top-2 -right-2 bg-cover bg-[url('/assets/images/bg-number.svg')]">
                         2</div>
                 </a>
-                <a class="item-card relative group duration-300" href="#">
+                <a class="item-card relative group duration-300" href="#buy">
                     <div class="w-full aspect-[3/2] relative bg-[#DEDEDE]">
                         <img class="duration-300" src="/assets/images/cover-buy-bw.png" alt="cover buy project">
                         <img class="absolute top-0 duration-500 opacity-0 group-hover:opacity-100"
@@ -144,6 +144,7 @@
 
         <div id="crystal-section"></div>
         <div id="mnext-section"></div>
+        <div id="buy-section"></div>
         <script>
             fetch("/components/Crystal.html")
                 .then(res => res.text())
@@ -154,6 +155,11 @@
                 .then(res => res.text())
                 .then(html => {
                     document.getElementById("mnext-section").innerHTML = html;
+                });
+            fetch("/components/Buy.html")
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById("buy-section").innerHTML = html;
                 });
         </script>
 
