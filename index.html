@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
-    <title>About Me</title>
+    <title>About Narattha</title>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -31,20 +31,55 @@
 
             type();
         });
+
     </script>
 
 
 </head>
 
 <body>
-    <div id="nav-placeholder"></div>
+    <!-- <div id="nav-placeholder"></div>
     <script>
         fetch("/components/Navbar.html")
             .then(res => res.text())
             .then(html => {
                 document.getElementById("nav-placeholder").innerHTML = html;
             });
-    </script>
+    </script> -->
+    <nav class="nav relative flex flex-col-reverse lg:flex-row justify-between items-center gap-4 px-4 md:px-20 py-5">
+        <div class="flex gap-10">
+            <a href="/" class="nav-item-active relative flex flex-col">
+                <span class="nav-item-bg absolute bg-[#E4F794] bottom-0"></span>
+                <span class="text-[#7D7D7D]">01</span>
+                <span>About Me</span>
+            </a>
+            <a href="/allproject/" class="nav-item relative flex flex-col">
+                <span class="nav-item-bg absolute bg-[#E4F794] bottom-0"></span>
+                <span class="text-[#7D7D7D]">02</span>
+                <span>Projects</span>
+            </a>
+            <a href="/allproject/" class="nav-item relative flex flex-col">
+                <span class="nav-item-bg absolute bg-[#E4F794] bottom-0"></span>
+                <span class="text-[#7D7D7D]">03</span>
+                <span>Me More</span>
+            </a>
+        </div>
+        <div class="w-full lg:w-fit flex justify-between">
+            <a href="" class="lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 duration-300">
+                <img class="w-full" src="/assets/images/narattha-logo.svg" alt="">
+            </a>
+            <div class="flex gap-4 text-[#222222]">
+                <a class="flex flex-col items-center text-3xl duration-150 hover:scale-125 hover:text-[#E4F794]"
+                    href="https://www.linkedin.com/in/tanarat-arj/" target="_blank">
+                    <i class="hgi hgi-stroke hgi-linkedin-01"></i>
+                </a>
+                <a class="flex flex-col items-center text-3xl duration-150 hover:scale-125 hover:text-[#E4F794]"
+                    href="https://www.instagram.com/naratthaa/" target="_blank">
+                    <i class="hgi hgi-stroke hgi-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
 
     <div class="div-contents px-4 lg:px-20 pb-20">
         <div class="about-content flex flex-col-reverse md:grid md:grid-cols-[2fr,1fr] gap-10 lg:gap-20 pt-10 md:pt-20">
@@ -148,6 +183,7 @@
                         <br>• Git / Gitea
                         <br>• Visual Studio Code
                         <br>• Android Studio
+                        <br>• Notion / Trello
                 </div>
             </div>
         </div>
@@ -191,7 +227,7 @@
         </div>
 
         <div class="projects-content flex justify-center mt-40">
-            <a class="relative group" href="">
+            <a class="relative group" href="/allproject">
                 <img class="w-[300px]" src="/assets/images/folder-back.svg" alt="">
                 <img class="absolute top-10 left-6 w-[120px] rounded-xl shadow-sm duration-300 group-hover:rotate-[-0.05turn]"
                     src="/assets/images/cover-buy-bw.png" alt="">
