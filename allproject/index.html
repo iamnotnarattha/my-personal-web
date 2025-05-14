@@ -37,7 +37,7 @@
 </head>
 
 <body>
-    <nav class="nav relative flex flex-col-reverse lg:flex-row justify-between items-center gap-4 px-4 md:px-20 py-5">
+    <nav id="top" class="nav relative flex flex-col-reverse lg:flex-row justify-between items-center gap-4 px-4 md:px-20 py-5">
         <div class="flex gap-10">
             <a href="/" class="nav-item relative flex flex-col">
                 <span class="nav-item-bg absolute bg-[#E4F794] bottom-0"></span>
@@ -71,7 +71,7 @@
             </div>
         </div>
     </nav>
-    <div class="div-contents px-4 lg:px-20 pb-20">
+    <div class="div-contents relative px-4 lg:px-20 pb-20">
         <div class="cer-content mt-16">
             <div class="relative flex items-center gap-2">
                 <div class="absolute z-[-1] w-5 -top-1 aspect-square bg-[#E4F794]"></div>
@@ -142,11 +142,18 @@
             </div>
         </div>
 
+       
+        <div id="quick-section"></div>
         <div id="crystal-section"></div>
         <div id="mnext-section"></div>
         <div id="buy-section"></div>
         <div id="eventar-section"></div>
         <script>
+            fetch("/components/QuickButtons.html")
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById("quick-section").innerHTML = html;
+                });
             fetch("/components/Crystal.html")
                 .then(res => res.text())
                 .then(html => {
