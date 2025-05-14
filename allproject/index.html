@@ -37,7 +37,8 @@
 </head>
 
 <body>
-    <nav id="top" class="nav relative flex flex-col-reverse lg:flex-row justify-between items-center gap-4 px-4 md:px-20 py-5">
+    <nav id="top"
+        class="nav relative flex flex-col-reverse lg:flex-row justify-between items-center gap-4 px-4 md:px-20 py-5">
         <div class="flex gap-10">
             <a href="/" class="nav-item relative flex flex-col">
                 <span class="nav-item-bg absolute bg-[#E4F794] bottom-0"></span>
@@ -142,8 +143,8 @@
             </div>
         </div>
 
-       
-        <div id="quick-section"></div>
+
+        <div id="quick-section" class="opacity-0 duration-500"></div>
         <div id="crystal-section"></div>
         <div id="mnext-section"></div>
         <div id="buy-section"></div>
@@ -174,6 +175,22 @@
                 .then(html => {
                     document.getElementById("eventar-section").innerHTML = html;
                 });
+
+            window.addEventListener('scroll', () => {
+                const cerContent = document.querySelector('.cer-content');
+                const quickSection = document.getElementById('quick-section');
+
+                const cerRect = cerContent.getBoundingClientRect();
+                const triggerPoint = window.innerHeight / 2;
+
+                if (cerRect.bottom < triggerPoint) {
+                    quickSection.classList.remove('opacity-0');
+                    quickSection.classList.add('opacity-100');
+                } else {
+                    quickSection.classList.remove('opacity-100');
+                    quickSection.classList.add('opacity-0');
+                }
+            });
         </script>
 
     </div>
