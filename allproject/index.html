@@ -37,7 +37,7 @@
 </head>
 
 <body>
-    <nav id="top"
+    <header id="top"
         class="nav relative flex flex-col-reverse lg:flex-row justify-between items-center gap-4 px-4 md:px-20 py-5">
         <div class="flex gap-10">
             <a href="/" class="nav-item relative flex flex-col">
@@ -71,28 +71,21 @@
                 </a>
             </div>
         </div>
-    </nav>
-    <div class="div-contents relative px-4 lg:px-20 pb-20">
-        <div class="cer-content mt-16">
+    </header>
+    <main class="div-contents relative px-4 lg:px-20 pb-20">
+        <section class="projects-content mt-16">
             <div class="relative flex items-center gap-2">
                 <div class="absolute z-[-1] w-5 -top-1 aspect-square bg-[#E4F794]"></div>
-                <p class="text-xl font-medium">Projects</p>
+                <h1 class="text-xl font-medium">Projects</h1>
                 <div class="w-full h-[1px] bg-[#e5e6e1]"></div>
             </div>
             <div class="items mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 text-[#222222] bg-[#E4F79415]">
-                <!-- <a class="item-card relative group duration-300" href="">
-                    <img class="w-full" src="/assets/images/folder-back.svg" alt="">
-                    <img class="absolute w-[90%] bottom-0 left-4 rounded-xl" src="/assets/images/cover-crystal-bw.png" alt="cover crystal project">
-                    <img class="absolute w-[90%] bottom-0 left-4 rounded-xl duration-500 opacity-0 group-hover:opacity-100"
-                        src="/assets/images/cover-crystal-color.png" alt="cover crystal project">
-                        <img class="absolute -bottom-1 w-full" src="/assets/images/folder-front.svg" alt="">
-                        <div class="absolute w-10 aspect-square text-lg font-medium flex justify-center items-center top-0 -right-2 bg-cover bg-[url('/assets/images/bg-number.svg')]">1</div>
-                </a> -->
                 <a class="item-card relative group duration-300" href="#crystal">
                     <div class="w-full aspect-[3/2] relative bg-[#DEDEDE]">
-                        <img class="duration-300" src="/assets/images/cover-crystal-bw.png" alt="cover crystal project">
+                        <img class="duration-300" src="/assets/images/cover-crystal-bw.png"
+                            alt="Crystal Project Cover Black and White">
                         <img class="absolute top-0 duration-500 opacity-0 group-hover:opacity-100"
-                            src="/assets/images/cover-crystal-color.png" alt="cover crystal project">
+                            src="/assets/images/cover-crystal-color.png" alt="Crystal Project Cover Color">
                     </div>
                     <span
                         class="absolute duration-300 bottom-0 right-0 bg-[#222222] text-[#FFFFFF] py-3 px-4 lg:opacity-0 group-hover:opacity-100">View
@@ -103,9 +96,10 @@
                 </a>
                 <a class="item-card relative group duration-300" href="#mnext">
                     <div class="w-full aspect-[3/2] relative bg-[#DEDEDE]">
-                        <img class="duration-300" src="/assets/images/cover-mnext-bw.png" alt="cover mnext project">
+                        <img class="duration-300" src="/assets/images/cover-mnext-bw.png"
+                            alt="Mnext Project Cover Black and White">
                         <img class="absolute top-0 duration-500 opacity-0 group-hover:opacity-100"
-                            src="/assets/images/cover-mnext-color.png" alt="cover mnext project">
+                            src="/assets/images/cover-mnext-color.png" alt="Mnext Project Cover Color">
                     </div>
                     <span
                         class="absolute duration-300 bottom-0 right-0 bg-[#222222] text-[#FFFFFF] py-3 px-4 lg:opacity-0 group-hover:opacity-100">View
@@ -116,9 +110,10 @@
                 </a>
                 <a class="item-card relative group duration-300" href="#buy">
                     <div class="w-full aspect-[3/2] relative bg-[#DEDEDE]">
-                        <img class="duration-300" src="/assets/images/cover-buy-bw.png" alt="cover buy project">
+                        <img class="duration-300" src="/assets/images/cover-buy-bw.png"
+                            alt="BUY.th Project Cover Black and White">
                         <img class="absolute top-0 duration-500 opacity-0 group-hover:opacity-100"
-                            src="/assets/images/cover-buy-color.png" alt="cover buy project">
+                            src="/assets/images/cover-buy-color.png" alt="BUY.th Project Cover Color">
                     </div>
                     <span
                         class="absolute duration-300 bottom-0 right-0 bg-[#222222] text-[#FFFFFF] py-3 px-4 lg:opacity-0 group-hover:opacity-100">View
@@ -129,9 +124,10 @@
                 </a>
                 <a class="item-card relative group duration-300" href="#eventar">
                     <div class="w-full aspect-[3/2] relative bg-[#DEDEDE]">
-                        <img class="duration-300" src="/assets/images/cover-eventar-bw.png" alt="cover eventar project">
+                        <img class="duration-300" src="/assets/images/cover-eventar-bw.png"
+                            alt="Eventar Project Cover Black and White">
                         <img class="absolute top-0 duration-500 opacity-0 group-hover:opacity-100"
-                            src="/assets/images/cover-eventar-color.png" alt="cover eventar project">
+                            src="/assets/images/cover-eventar-color.png" alt="Eventar Project Cover Color">
                     </div>
                     <span
                         class="absolute duration-300 bottom-0 right-0 bg-[#222222] text-[#FFFFFF] py-3 px-4 lg:opacity-0 group-hover:opacity-100">View
@@ -141,59 +137,59 @@
                         4</div>
                 </a>
             </div>
-        </div>
+        </section>
 
 
-        <div id="quick-section" class="opacity-0 duration-500"></div>
-        <div id="crystal-section"></div>
-        <div id="mnext-section"></div>
-        <div id="buy-section"></div>
-        <div id="eventar-section"></div>
-        <script>
-            fetch("/components/QuickButtons.html")
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById("quick-section").innerHTML = html;
-                });
-            fetch("/components/Crystal.html")
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById("crystal-section").innerHTML = html;
-                });
-            fetch("/components/Mnext.html")
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById("mnext-section").innerHTML = html;
-                });
-            fetch("/components/Buy.html")
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById("buy-section").innerHTML = html;
-                });
-            fetch("/components/Eventar.html")
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById("eventar-section").innerHTML = html;
-                });
+        <section id="quick-section" class="opacity-0 duration-500"></section>
+        <section id="crystal-section"></section>
+        <section id="mnext-section"></section>
+        <section id="buy-section"></section>
+        <section id="eventar-section"></section>
 
-            window.addEventListener('scroll', () => {
-                const cerContent = document.querySelector('.cer-content');
-                const quickSection = document.getElementById('quick-section');
-
-                const cerRect = cerContent.getBoundingClientRect();
-                const triggerPoint = window.innerHeight / 2;
-
-                if (cerRect.bottom < triggerPoint) {
-                    quickSection.classList.remove('opacity-0');
-                    quickSection.classList.add('opacity-100');
-                } else {
-                    quickSection.classList.remove('opacity-100');
-                    quickSection.classList.add('opacity-0');
-                }
+    </main>
+    <script>
+        fetch("/components/QuickButtons.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("quick-section").innerHTML = html;
             });
-        </script>
+        fetch("/components/Crystal.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("crystal-section").innerHTML = html;
+            });
+        fetch("/components/Mnext.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("mnext-section").innerHTML = html;
+            });
+        fetch("/components/Buy.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("buy-section").innerHTML = html;
+            });
+        fetch("/components/Eventar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("eventar-section").innerHTML = html;
+            });
 
-    </div>
+        window.addEventListener('scroll', () => {
+            const cerContent = document.querySelector('.projects-content');
+            const quickSection = document.getElementById('quick-section');
+
+            const cerRect = cerContent.getBoundingClientRect();
+            const triggerPoint = window.innerHeight / 2;
+
+            if (cerRect.bottom < triggerPoint) {
+                quickSection.classList.remove('opacity-0');
+                quickSection.classList.add('opacity-100');
+            } else {
+                quickSection.classList.remove('opacity-100');
+                quickSection.classList.add('opacity-0');
+            }
+        });
+    </script>
 </body>
 
 </html>
