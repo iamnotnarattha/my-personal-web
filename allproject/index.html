@@ -147,6 +147,35 @@
         <section id="eventar-section"></section>
 
     </main>
+    <footer class="bg-white py-10">
+        <div class="px-4 lg:px-20 mx-auto flex flex-col-reverse md:flex-row justify-between items-center gap-6">
+            <!-- Left: Signature or Personal Branding -->
+            <div class="text-center md:text-left flex flex-col gap-1">
+                <div class="flex items-center gap-3">
+                    <p class="text-[#222222] font-semibold text-lg pt-1">Designed & coded by</p>
+                    <img class="h-5" src="/assets/images/narattha-logo.svg" alt="">
+                </div>
+                <p class="text-gray-500">UX/UI Designer</p>
+                <div class="text-gray-400">© 2025 Narattha. All rights reserved.</div>
+            </div>
+
+            <!-- Right: Social + Navigation -->
+            <div class="flex flex-col items-center md:items-end gap-1">
+                <div class="flex space-x-4">
+                    <a class="flex flex-col items-center text-3xl duration-150 hover:scale-125 hover:text-[#E4F794]"
+                        href="https://www.linkedin.com/in/tanarat-arj/" target="_blank">
+                        <i class="hgi hgi-stroke hgi-linkedin-01"></i>
+                    </a>
+                    <a class="flex flex-col items-center text-3xl duration-150 hover:scale-125 hover:text-[#E4F794]"
+                        href="https://www.instagram.com/naratthaa/" target="_blank">
+                        <i class="hgi hgi-stroke hgi-instagram"></i>
+                    </a>
+                </div>
+                <div class="text-gray-500">+669 8170 2726</div>
+                <div class="text-gray-500">tanarat1718@gmail.com</div>
+            </div>
+        </div>
+    </footer>
     <script>
         fetch("/components/QuickButtons.html")
             .then(res => res.text())
